@@ -116,6 +116,7 @@ on property:twrp.all.users.decrypted=true
 
 on property:crypto.ready=1 && property:hwservicemanager.ready=true
     start qseecomd
+    start vendor.keymint-qti
 
 on property:sys.listeners.registered=true
     start keymaster-4-0-qti
