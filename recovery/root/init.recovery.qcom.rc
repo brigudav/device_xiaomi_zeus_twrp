@@ -57,12 +57,6 @@ service keystore_auth /system/bin/keystore_auth
     oneshot
     seclabel u:r:recovery:s0
 
-service keystore2 /system/bin/keystore2 /data/misc/keystore
-    class early_hal
-    user keystore
-    group keystore readproc log
-    seclabel u:r:recovery:s0
-
 service gatekeeper-1-0-qti /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
     user root
