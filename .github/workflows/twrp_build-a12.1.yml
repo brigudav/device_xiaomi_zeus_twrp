@@ -158,7 +158,7 @@ jobs:
         BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
       run: |
         ZIP=${{ steps.var.outputs.Outdir }}/${{ steps.zipname.outputs.name }}
-        curl https://api.telegram.org/bot$BOT_TOKEN/sendDocument
+        curl https://api.telegram.org/bot$BOT_TOKEN/sendDocument \
         -F chat_id=$CHAT_ID \
         -F disable_notification=true \
         -F parse_mode=HTML \
