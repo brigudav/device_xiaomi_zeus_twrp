@@ -162,7 +162,7 @@ jobs:
         -F chat_id=$CHAT_ID \
         -F disable_notification=true \
         -F parse_mode=HTML \
-        -F caption="<b>- Build for <i>${{ github.event.inputs.DEVICE_NAME }}</i> completed.</b>" \
+        -F caption=" <b>- Build for <i>${{ github.event.inputs.DEVICE_NAME }}</i> completed.</b> " \
         -F document=@$ZIP
 
     - name: Publish to GitHub
